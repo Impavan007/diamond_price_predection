@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diamond Price Predictor - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+        * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2.5rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto 100px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease;
+    }
+
+    .container h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #8ec5fc, #e0c3fc);
+      border: none;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.4s ease;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 700px) {
+      .container h1 {
+        font-size: 2.2rem;
+      }
+      .container p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    💎 Diamond Price Predictor
+  </header>
+
+  <div class="container">
+    <h1>Welcome to the Diamond Price Predictor</h1>
+    <p>Use our intelligent AI model to estimate the value of any diamond based on its physical and grading attributes. Powered by advanced machine learning, our tool helps jewelers, investors, and enthusiasts make data-driven decisions with ease.</p>
+    <a href="{{ url_for('predict_datapoint') }}" class="cta-button">Start Predicting</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Diamond Price Predictor. Crafted with 💎 and Flask.
+  </footer>
+
+</body>
+</html>
